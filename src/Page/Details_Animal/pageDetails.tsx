@@ -55,6 +55,13 @@ export default function pageDetails() {
           <span>Tê liệt, khó thở, buồn nôn, co giật</span>
           <span>Trường hợp nặng có thể tử vong do suy hô hấp hoặc sốc phản vệ</span>
         </div>
+        <div className='block padding_7 fw_600'>
+          Mô Tả
+          <span>
+            Rắn hổ mang là một trong những loài rắn độc phổ biến ở Việt Nam, thuộc họ Elapidae. Chúng có nọc độc mạnh,
+            khả năng phồng mang đe dọa kẻ thù, và thường sống gần khu dân cư.
+          </span>
+        </div>
         <div className='danger_level fw_600'>Rắn hổ mang cắn rất nguy hiểm, cần cấp cứu ngay!</div>
       </div>
     </div>
