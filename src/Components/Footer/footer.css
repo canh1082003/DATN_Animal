@@ -1,0 +1,38 @@
+.footer {
+  border-top: 1px solid #ccc;
+  background: #000 !important;
+
+  color: #fff;
+  .footer_main {
+    display: flex;
+    padding: 20px 40px;
+    .footer_contact {
+      flex: 1;
+      .footer_roadName {
+        padding-top: 10px;
+      }
+    }
+    .footer_Links {
+      flex: 1;
+      list-style-type: none;
+      .footer_Links_title_list {
+        padding-top: 10px;
+      }
+      .footer_Links_title_list li:hover {
+        text-decoration: underline;
+      }
+    }
+    .footer_follow {
+      .footer_follow_icon {
+        flex: 1;
+        list-style-type: none;
+      }
+      .footer_follow_icon {
+        padding-top: 10px;
+      }
+      .footer_follow_icon li:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.header {
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  padding: 0 20px;
+  color: var(--color-Main);
+  border: 1px solid rgba(35, 35, 35, 0.1);
+  .heading {
+    a {
+      text-decoration: none;
+      color: var(--color-Main);
+    }
+    font-family: var(--font-Main);
+    flex: 1;
+    margin: auto;
+    font-size: 40px;
+    span {
+      color: rgb(255, 255, 51);
+    }
+  }
+  .header_title {
+    display: flex;
+    margin: auto;
+    flex: 2;
+    li {
+      display: flex;
+      flex: 1;
+      a {
+        text-decoration: none;
+        color: var(--color-Main);
+        font-size: 20px;
+      }
+    }
+  }
+  .header_user {
+    margin: auto;
+    display: flex;
+    .find_Animal {
+      color: var(--color-Main);
+      .find_icon {
+        width: 30px;
+        height: 30px;
+        margin: auto 0;
+        margin-right: 10px;
+        margin-top: 5px;
+      }
+    }
+    .header_Newsletter {
+      padding: 5px;
+      margin: auto 0;
+      font-weight: 800;
+      font-family: var(--font-Main);
+    }
+    .header_Newsletter:hover {
+      background-color: yellow;
+      padding: 5px;
+    }
+    .header_icon {
+      border: 1px solid #fff;
+      border-radius: 5px;
+      margin-left: 20px;
+      .header_icon_user_1 {
+        color: var(--color-Main);
+        width: 35px;
+        height: 35px;
+      }
+      .header_icon_user_2 {
+        color: var(--color-Main);
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+}

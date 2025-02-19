@@ -1,0 +1,175 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+  /* min-height: 100vh; */
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Image Section */
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-width: 100%;
+  height: 400px;
+}
+
+/* Form Section */
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.social-login {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.social-btn.facebook {
+  background-color: #3b5998;
+}
+
+.social-btn.twitter {
+  background-color: #ccc;
+  color: var(--color-Main);
+}
+
+.social-btn.linkedin {
+  background-color: #0077b5;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.divider p {
+  display: inline-block;
+  background: white;
+  padding: 0 10px;
+  position: relative;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.options label {
+  font-size: 14px;
+}
+
+.forgot-password {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions .btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 10px 40px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions .btn:hover {
+  background-color: #ccc;
+  color: var(--color-Main);
+}
+
+.actions p {
+  margin-top: 10px;
+}
+
+.link-danger {
+  color: #d9534f;
+  text-decoration: none;
+}
+
+.link-danger:hover {
+  color: #c9302c;
+  text-decoration: underline;
+}
+.name {
+  display: flex;
+  #firstName {
+    margin-right: 20px;
+  }
+  #lastName {
+    margin-left: 37px;
+  }
+}
+.mr_l_60 {
+  margin-left: 35px;
+}

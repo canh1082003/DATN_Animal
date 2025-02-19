@@ -1,0 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --font-Main: 'Montserrat', 'Gill Sans', 'Gill Sans MT', sans-serif; /* Hoặc font mà bạn muốn */
+  --color-Main: #000;
+  --background-color-Main: #f7f5f5;
+}
