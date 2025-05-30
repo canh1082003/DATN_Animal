@@ -2,7 +2,7 @@ import React from 'react'
 import './footer.css'
 import ChatBox from '../../Page/ChatBox/ChatBox'
 export default function Footer() {
-  const renderFooter = () => {
+  const RenderFooter = () => {
     return (
       <div className='footer'>
         <div className='footer_main'>
@@ -14,7 +14,7 @@ export default function Footer() {
               Email: infor
               <a href=''>@thucung.com</a>
             </div>
-            <div className='footer_phoneNumber'>Điện Thoại: 043568344</div>
+            <div className='footer_phoneNumber'>Điện Thoại: 0775500478</div>
           </div>
           <div className='footer_Links'>
             <div className='footer_Links_title'>Liên Kết Nhanh</div>
@@ -38,7 +38,7 @@ export default function Footer() {
   }
   return (
     <>
-      {renderFooter()}
+      <RenderFooter />
       <ChatBox />
     </>
   )

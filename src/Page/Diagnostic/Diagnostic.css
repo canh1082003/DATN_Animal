@@ -1,0 +1,259 @@
+.diagnostic-page {
+  padding: 3rem 1rem;
+
+  .diagnostic-container {
+    max-width: 48rem;
+    margin: 0 auto;
+
+    .diagnostic-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+
+      .diagnostic-title {
+        font-size: 1.875rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      .diagnostic-subtitle {
+        color: var(--muted-foreground);
+      }
+    }
+
+    .diagnostic-tabs {
+      width: 100%;
+      .tabs-header {
+        margin-bottom: 2rem;
+        .tabs-list {
+          display: grid;
+          width: 100%;
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .tab-trigger {
+          padding: 0.5rem;
+          background: none;
+          border: 1px solid var(--border);
+          cursor: pointer;
+
+          &.active {
+            background-color: var(--primary);
+            color: white;
+          }
+        }
+      }
+
+      .tab-content-container {
+        margin-top: 2rem;
+
+        .tab-content {
+          display: none;
+
+          &.active,
+          &:not(.hidden) {
+            display: block;
+          }
+          .card {
+            padding: 20px;
+            .card-header {
+              gap: 0.5rem;
+
+              .card-title {
+                font-size: 1.125rem;
+                font-weight: 600;
+              }
+              .card-description {
+                margin-bottom: 20px;
+              }
+            }
+            .form-content {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+
+              .form-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1rem;
+
+                @media (min-width: 768px) {
+                  grid-template-columns: repeat(2, 1fr);
+                }
+              }
+              .form-group {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+
+                .form-input {
+                  width: 100%;
+                  padding: 0.5rem 0.75rem;
+                  border: 1px solid var(--border);
+                  border-radius: var(--radius);
+
+                  .dark & {
+                    background-color: var(--secondary);
+                  }
+                }
+
+                .radio-group {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.5rem;
+
+                  .radio-option {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    color: #000;
+                  }
+                }
+                .radio-option input[type='radio'] {
+                  accent-color: black;
+                }
+                .behavior-textarea,
+                .solutions-textarea {
+                  min-height: 150px;
+                }
+              }
+            }
+
+            .form-footer {
+              display: flex;
+              justify-content: flex-end;
+              .next-button {
+                padding: 10px 20px;
+                background-color: var(--primary);
+                border: none;
+                border-radius: 5px;
+              }
+            }
+
+            .form-footer-between {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .next-button,
+            .analyze-button,
+            .back-button {
+              padding: 10px 20px;
+              background-color: var(--primary);
+              border: none;
+              border-radius: 5px;
+            }
+
+            .button-icon {
+              height: 1rem;
+              width: 1rem;
+            }
+            .result-header {
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+
+              .success-icon {
+                height: 1.5rem;
+                width: 1.5rem;
+                color: #22c55e;
+              }
+            }
+
+            .result-content {
+              display: flex;
+              flex-direction: column;
+              gap: 1.5rem;
+
+              .result-section {
+                margin-bottom: 1rem;
+
+                .result-section-title {
+                  font-size: 1.125rem;
+                  font-weight: 600;
+                  margin-bottom: 0.5rem;
+                }
+
+                .result-text {
+                  color: #000;
+                }
+
+                .causes-list {
+                  list-style-type: disc;
+                  padding-left: 1.25rem;
+                  color: var(--muted-foreground);
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.25rem;
+                }
+
+                .solutions {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1rem;
+
+                  .solution-card {
+                    background-color: rgba(244, 208, 63, 0.1);
+                    padding: 1rem;
+                    border-radius: var(--radius);
+
+                    .dark & {
+                      background-color: rgba(244, 208, 63, 0.05);
+                    }
+
+                    .solution-title {
+                      font-weight: 500;
+                      margin-bottom: 0.5rem;
+                    }
+
+                    .solution-text {
+                      font-size: 0.875rem;
+                      color: var(--muted-foreground);
+                    }
+                  }
+                }
+
+                .related-articles {
+                  list-style-type: none;
+                  padding: 0;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.5rem;
+
+                  .article-link {
+                    color: var(--primary);
+                    text-decoration: none;
+
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
+                }
+              }
+            }
+            .result-footer {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+
+              @media (min-width: 640px) {
+                flex-direction: row;
+                justify-content: space-between;
+              }
+
+              .save-button,
+              .consult-button {
+                padding: 10px 20px;
+                background-color: var(--primary);
+                border: none;
+                border-radius: 5px;
+                @media (min-width: 640px) {
+                  width: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

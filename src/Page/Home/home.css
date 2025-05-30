@@ -5,77 +5,488 @@
       position: relative;
       .videoHome {
         z-index: 1;
-        width: 96vw;
-        height: 400px;
+        width: 99vw;
+        height: 700px;
         object-fit: cover;
       }
-      p {
+      .hero-text {
         font-family: var(--font-Main);
         position: absolute;
-        color: yellow;
-        font-size: 70px;
-        top: 300px;
+        top: 250px;
         left: 150px;
-        span {
+        z-index: 2;
+
+        .hero-title {
           color: #fff;
-          padding: 15px;
+          font-size: 80px;
+          margin-bottom: 20px;
+          .highlight {
+            color: yellow;
+          }
+        }
+        .hero-description {
+          color: #fff;
+          font-size: 30px;
+          margin-top: 0;
+        }
+      }
+      .hero-buttons {
+        position: absolute;
+        top: 500px;
+        left: 150px;
+        display: flex;
+        gap: 20px;
+
+        .hero-button-firstdary,
+        .hero-button-secondary {
+          padding: 12px 24px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 18px;
+          transition: all 0.3s ease;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+
+        .hero-button-firstdary {
+          background-color: yellow;
+          color: #333;
+          border: none;
+
+          &:hover {
+            background-color: #e6e600;
+          }
+        }
+
+        .hero-button-secondary {
+          background-color: transparent;
+          color: white;
+          border: 2px solid white;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+          }
         }
       }
     }
   }
-  .home_animal_type {
-    .heading_animal {
-      margin: 30px;
-      text-align: center;
-      font-family: var(--font-Main);
-      color: var(--color-Main);
-      font-size: 30px;
-      font-weight: 800;
+  .behavior-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    .section-title {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 50px;
+      font-weight: 700;
     }
-    .list_animal_type {
-      padding: 30px 100px;
+    .feature-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      .feature-card {
+        background-color: #efecec;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        padding: 30px;
+        width: 250px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .icon-container {
+        width: 60px;
+        height: 60px;
+        background-color: rgba(255, 215, 0, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        .icon {
+          width: 30px;
+          height: 30px;
+          color: #ffd700; /* Gold color */
+        }
+      }
+      .card-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+      .card-description {
+        font-size: 1rem;
+        color: #666;
+        line-height: 1.6;
+        text-align: center;
+      }
+      @media (max-width: 1200px) {
+        .feature-cards {
+          max-width: 900px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .feature-cards {
+          max-width: 600px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .feature-card {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+  .articles-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    .section-header {
+      margin-bottom: 30px;
+      .section-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+      }
+      .btn-article {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        cursor: pointer;
+        .view-all-link {
+          text-align: end;
+          gap: 8px;
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+          transition: color 0.3s ease;
+        }
+
+        .view-all-link:hover {
+          text-decoration: underline;
+          color: #007bff;
+        }
+
+        .arrow-icon {
+          width: 20px;
+          height: 20px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 4px;
+        }
+      }
+    }
+
+    .articles-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 10px;
-      a {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+
+      .article-card {
+        position: relative;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .article-content {
+          padding: 1.5rem;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+
+          h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.2rem;
+            color: #333;
+            line-height: 1.4;
+            font-weight: 600;
+          }
+
+          .category {
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            display: inline-block;
+            padding: 4px 12px;
+            background-color: #ffd700;
+            color: #333;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            align-self: flex-start;
+          }
+
+          .description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+            flex: 1;
+          }
+
+          a {
+            display: inline-block;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: auto;
+            padding: 8px 0;
+
+            &:hover {
+              text-decoration: underline;
+              color: #0056b3;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px;
+        max-width: 900px;
+      }
+
+      @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 10px;
+        max-width: 600px;
+
+        .article-card {
+          img {
+            height: 180px;
+          }
+
+          .article-content {
+            padding: 1.2rem;
+
+            h3 {
+              font-size: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  }
+  .diagnostic-section {
+    padding: 4rem 1rem;
+    background-color: var(--primary);
+    background-opacity: 0.1;
+
+    .dark & {
+      background-color: rgba(244, 208, 63, 0.1);
+    }
+
+    .diagnostic-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      @media (min-width: 1024px) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .diagnostic-text {
+        flex: 1;
+
+        @media (min-width: 1024px) {
+          width: 50%;
+        }
+
+        .diagnostic-description {
+          font-size: 1.125rem;
+          margin-bottom: 1.5rem;
+        }
+        .btn_diagnostic {
+          padding: 12px 24px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 18px;
+          transition: all 0.3s ease;
+          background-color: yellow;
+          color: #333;
+          border: none;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+
+          &:hover {
+            background-color: #e6e600;
+          }
+        }
+      }
+
+      .diagnostic-image-container {
+        position: relative;
+        border-radius: 0.75rem;
+        overflow: hidden;
+
+        @media (min-width: 1024px) {
+          width: 50%;
+        }
+
+        .diagnostic-image {
+          object-fit: cover;
+          height: 500px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .forum-section {
+    padding: 4rem 1rem;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+    }
+
+    .forum-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .card {
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 0.75rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .card-header {
+          margin-bottom: 1rem;
+        }
+
+        .card-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 0.25rem;
+        }
+
+        .card-description {
+          font-size: 0.875rem;
+          color: #6b7280;
+        }
+
+        .card-content {
+          flex-grow: 1;
+          font-size: 1rem;
+          color: #1f2937;
+          margin-bottom: 1.5rem;
+        }
+
+        .card-footer {
+          text-align: left;
+
+          .button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid #0f172a;
+            border-radius: 0.375rem;
+            font-size: 0.95rem;
+            color: #0f172a;
+            text-decoration: none;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: #0f172a;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    .forum-cta {
+      text-align: center;
+      margin-top: 3rem;
+
+      .button {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: #0f172a;
+        color: white;
         text-decoration: none;
-        color: var(--color-Main);
-        .animal_type {
-          margin: 10px;
-          .animal_img {
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            width: 400px;
-            height: 300px;
-            display: block;
-          }
-          .animal_describe {
-            background-color: var(--background-color-Main);
-            width: 400px;
-            border: 1px solid rgba(52, 52, 52, 0.3);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            .name_animal {
-              padding: 10px 20px;
-              font-size: 20px;
-              font-weight: 800;
-              font-family: var(--font-Main);
-            }
-            .animal_seemore {
-              display: flex;
-              padding-top: 50px;
-              padding-bottom: 70px;
-              padding-left: 20px;
-              .animal_type_icon {
-                width: 26px;
-                height: 26px;
-              }
-              .seemore {
-                padding-left: 10px;
-                font-size: 20px;
-              }
-            }
-          }
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #1e366e;
         }
       }
     }

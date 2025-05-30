@@ -3,11 +3,10 @@ import MainLayout from '../Layout/MainLayout'
 import Home from '../Page/Home/Home'
 import Login from '../Page/Login/Login'
 import Register from '../Page/Register/register'
-import Tensorflow from '../Page/TensorFlow/tensorflow'
-import PageRan from '../Page/Category/pageRan.tsx'
-import PageDetails from '../Page/Details_Animal/pageDetails.tsx'
 import VerifyEmail from '../Page/VerifyEmail/verifyEmai.tsx'
-
+import Library from '../Page/Library/library.tsx'
+import Diagnostic from '../Page/Diagnostic/Diagnostic.tsx'
+import Training from '../Page/Training/Training.tsx'
 const RouterElement = () => {
   return (
     <Routes>
@@ -15,12 +14,12 @@ const RouterElement = () => {
         <Route path='/' element={<Home />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/register' element={<Register />}></Route>
-        <Route path='/findAnimal' element={<Tensorflow />}></Route>
-        <Route path='/pageRan' element={<PageRan />}></Route>
-        <Route path='/detailsRan' element={<PageDetails />}></Route>
-        <Route path='/verifyEmail' element={<VerifyEmail />}></Route>
-      </Route>
-    </Routes>
+        <Route path='/verifyEmail/:email' element={<VerifyEmail />}></Route>
+        <Route path='/library' element={<Library />}></Route>
+        <Route path='/diagnostic' element={<Diagnostic />}></Route>
+        <Route path='/training' element={<Training />}></Route>
+      </Route >
+    </Routes >
   )
 }
 

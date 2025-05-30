@@ -1,0 +1,398 @@
+.training-page {
+  .header-training {
+    background: linear-gradient(135deg, #ffa726, #ffb74d);
+    padding: 60px 20px;
+    height: 400px;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* Training Methods Section */
+  .training-section {
+    padding: 60px 0;
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .training-categories {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+
+      .category-btn {
+        padding: 8px 20px;
+        background: transparent;
+        border: none;
+        color: #666;
+        font-size: 1rem;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        transition: all 0.3s ease;
+
+        &.active {
+          color: #333;
+          border-bottom-color: #ffa726;
+          font-weight: 600;
+        }
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+
+    .training-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-bottom: 60px;
+
+      .training-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        position: relative;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-image {
+          height: 200px;
+          background: linear-gradient(45deg, #e8f5e8, #f0f8f0);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3rem;
+          position: relative;
+
+          .difficulty-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: white;
+
+            &.badge-easy {
+              background: #4caf50;
+            }
+            &.badge-medium {
+              background: #ffa726;
+            }
+            &.badge-hard {
+              background: #f44336;
+            }
+          }
+        }
+
+        .card-content {
+          padding: 25px;
+
+          .card-duration {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+          }
+
+          .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+          }
+
+          .card-description {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+          }
+
+          .card-progress {
+            margin-bottom: 15px;
+
+            .progress-header {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              margin-bottom: 8px;
+
+              .progress-label {
+                font-size: 0.9rem;
+                color: #333;
+                font-weight: 500;
+              }
+
+              .progress-percentage {
+                font-size: 0.9rem;
+                color: #ffa726;
+                font-weight: 600;
+              }
+            }
+
+            .progress-bar {
+              height: 6px;
+              background: #e0e0e0;
+              border-radius: 3px;
+              overflow: hidden;
+
+              .progress-fill {
+                height: 100%;
+                background: linear-gradient(90deg, #ffa726, #ffb74d);
+                transition: width 0.3s ease;
+              }
+            }
+          }
+
+          .card-steps {
+            color: #666;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  /* Tips Section */
+  .tips-section {
+    background: #f5f7fa;
+    padding: 60px 0;
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+
+      .tip-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .tip-icon {
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(135deg, #ffa726, #ffb74d);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 20px;
+          font-size: 1.5rem;
+          color: white;
+        }
+
+        .tip-title {
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 15px;
+          color: #333;
+        }
+
+        .tip-description {
+          color: #666;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+
+  /* Progress Overview */
+  .progress-overview {
+    padding: 60px 0;
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+
+      .progress-stats {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+        .stats-title {
+          font-size: 1.4rem;
+          font-weight: 600;
+          margin-bottom: 20px;
+          color: #333;
+        }
+
+        .stats-subtitle {
+          color: #666;
+          margin-bottom: 30px;
+        }
+
+        .stats-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 25px;
+
+          .stat-item {
+            text-align: center;
+
+            .stat-number {
+              font-size: 2rem;
+              font-weight: 700;
+              color: #ffa726;
+              display: block;
+            }
+
+            .stat-label {
+              color: #666;
+              font-size: 0.9rem;
+              margin-top: 5px;
+            }
+          }
+        }
+
+        .overall-progress {
+          margin-top: 30px;
+
+          .overall-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+          }
+
+          .view-details {
+            color: #ffa726;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #ff9800;
+            }
+          }
+        }
+      }
+
+      .activity-feed {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+        .activity-item {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          padding: 15px 0;
+          border-bottom: 1px solid #f0f0f0;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          .activity-icon {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            flex-shrink: 0;
+
+            &.activity-success {
+              background: #4caf50;
+            }
+            &.activity-progress {
+              background: #ffa726;
+            }
+            &.activity-start {
+              background: #2196f3;
+            }
+          }
+
+          .activity-content {
+            flex: 1;
+
+            .activity-title {
+              font-weight: 500;
+              color: #333;
+              margin-bottom: 3px;
+            }
+
+            .activity-time {
+              color: #999;
+              font-size: 0.85rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 2rem;
+    }
+
+    .training-section {
+      .training-categories {
+        gap: 15px;
+      }
+    }
+
+    .progress-overview {
+      .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .progress-stats .stats-row {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    .training-section .training-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+}

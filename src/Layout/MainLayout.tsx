@@ -5,7 +5,6 @@ import Header from '../Components/Header/Header'
 const MainLayout = () => {
   return (
     <div>
-      {/* <StairEffect /> */}
       <Header />
       <Outlet />
       <Footer />

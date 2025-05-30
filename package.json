@@ -15,6 +15,7 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "postcss": "^8.4.49",
+    "postcss-nested": "^7.0.2",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.15",
@@ -38,10 +39,14 @@
     "@tensorflow/tfjs-core": "^4.22.0",
     "axios": "^1.7.9",
     "firebase": "^11.0.2",
+    "lucide-react": "^0.509.0",
+    "next-themes": "^0.4.6",
     "openai": "^4.78.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.0.2"
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.0.2",
+    "react-toastify": "^11.0.5"
   },
   "peerDependencies": {
     "@tensorflow/tfjs-backend-cpu": "^4.22.0",

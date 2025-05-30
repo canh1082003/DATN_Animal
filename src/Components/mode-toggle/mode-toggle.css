@@ -1,0 +1,80 @@
+.theme-toggle-button {
+  position: relative;
+}
+/* Mặc định sáng */
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark body {
+  background-color: #121212;
+  color: white;
+}
+.sun-icon {
+  height: 1.2rem;
+  width: 1.2rem;
+  rotate: 0deg;
+  scale: 1;
+  transition: all 0.3s;
+}
+
+.dark .sun-icon {
+  rotate: -90deg;
+  scale: 0;
+}
+
+.moon-icon {
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  rotate: 90deg;
+  scale: 0;
+  transition: all 0.3s;
+}
+
+.dark .moon-icon {
+  rotate: 0deg;
+  scale: 1;
+}
+.theme-dropdown {
+  position: absolute;
+  top: 90%; /* điều chỉnh theo nhu cầu */
+  right: 130px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  z-index: 100;
+  min-width: 140px;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  border: 1px solid #e0e0e0;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.theme-option {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.theme-option:hover {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+/* Optional: animation mượt khi mở dropdown */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
